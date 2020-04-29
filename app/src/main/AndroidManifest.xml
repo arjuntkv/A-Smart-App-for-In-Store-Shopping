@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.finalyearproject_demo1">
+
+    <uses-sdk tools:overrideLibrary="com.payumoney.sdkui,com.payumoney.core,com.payumoney.graphics,com.payu.upisdk" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".fireapp"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UUUHPreviousOrdersDisplayAdapter" />
+        <activity android:name=".UUUHPreviousOrderActivity" />
+        <activity android:name=".DisplayBill" />
+        <activity android:name=".BeforePaymentActivity" />
+        <activity android:name=".AdminListProductsActivity" />
+        <activity android:name=".ScanCodeActivity" />
+        <activity android:name=".AdminListordersActivity" />
+        <activity android:name=".AdminHomeActivity" />
+        <activity android:name=".AdminLoginActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".StartPaymentActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>

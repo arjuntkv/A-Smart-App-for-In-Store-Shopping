@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/grey_design"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="7dp"
+    app:cardElevation="6dp"
+    android:elevation="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="name"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_display_mobno"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="5dp"
+            android:text="Mobile No"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/order_display_email"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:text="Email ID"-->
+            <!--android:textAppearance="?android:textAppearanceLarge"-->
+            <!--android:textSize="16dp"-->
+            <!--android:textStyle="bold" />-->
+
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="order"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/permission_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#F44336"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:visibility="invisible"
+            android:text="Entrance pickup"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="40dp"
+                app:fabSize="normal"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/deleteicon"
+                android:layout_gravity="end"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="32dp"
+                android:id="@+id/admin_btn_close_order"
+                />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

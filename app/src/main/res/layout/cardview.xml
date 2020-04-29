@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="7dp"
+    app:cardElevation="6dp"
+    android:elevation="6dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+
+        <!--To display name-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:text="Milk"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="#FF408CFF" />
+
+        </RelativeLayout>
+
+        <!--To display "Amount" text and "Quantity" text-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Amount : "
+                android:textAppearance="?android:textAppearanceLarge"
+                android:padding="5dp"
+                android:id="@+id/amount_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_below="@+id/amount_text"
+                android:text="Quantity : "
+                android:textSize="18sp" />
+
+
+
+        </RelativeLayout>
+
+
+        <!--To display values of Amount and Quantity-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/card_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="400"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#FFB640FF" />
+
+            <EditText
+                android:id="@+id/card_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_amount"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLines="1"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:text="1"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#FF408CFF" />
+
+        </RelativeLayout>
+
+
+        <!--Two buttons-&ndash;&gt; close product button and ok quantity button-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="28dp"
+                android:src="@drawable/close"
+                android:layout_gravity="left"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/btn_close_profile"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:layout_below="@+id/btn_close_profile"
+                android:id="@+id/btn_ok_quantity"
+                android:padding="5dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:weightSum="2"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--&lt;!&ndash;linear layout for all other things in cardview&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="2"-->
+        <!--android:orientation="vertical">-->
+
+        <!--&lt;!&ndash;Name&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/name"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/card_name"/>-->
+
+        <!--&lt;!&ndash;Amount&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/amount"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/card_amount"/>-->
+
+        <!--&lt;!&ndash;Quantity&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/quantity"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/card_quantity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1" />-->
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btn_ok_quantity"-->
+            <!--android:text="ok quantity"-->
+            <!--/>-->
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btn_close_profile"-->
+            <!--android:text="Remove Product"-->
+            <!--android:layout_marginBottom="15sp"/>-->
+    <!--</LinearLayout>-->
+    <!---->
+
+<!--</LinearLayout>-->

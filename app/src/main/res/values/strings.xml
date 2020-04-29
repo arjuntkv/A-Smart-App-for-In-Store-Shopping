@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Smart App for In-Store Shopping</string>
+    <string name="name">Name: </string>
+    <string name="amount">Amount: </string>
+    <string name="quantity">Quantity: </string>
+    <string name="Dailyshoppinglist">Daily Shopping List</string>
+    <string name="Product">Product</string>
+</resources>
