@@ -134,10 +134,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             startActivity(new Intent(getApplicationContext(),HomeActivity.class));
-                            Toast.makeText(getApplicationContext(),"successfull",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Login successfull",Toast.LENGTH_SHORT).show();
                             mdialog.dismiss();
                         }else{
-                            Toast.makeText(getApplicationContext(),"failed..",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Failed to login..",Toast.LENGTH_SHORT).show();
                             mdialog.dismiss();
                         }
                     }

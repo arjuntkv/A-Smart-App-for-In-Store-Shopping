@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,16 +70,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             amount=(TextView)itemView.findViewById(R.id.card_amount);
             quan=(EditText) itemView.findViewById(R.id.card_quantity);
             btn=(FloatingActionButton)itemView.findViewById(R.id.btn_close_profile);
-            okbtn=(Button)itemView.findViewById(R.id.btn_ok_quantity);
+            //okbtn=(Button)itemView.findViewById(R.id.btn_ok_quantity);
         }
 
 
         public void enterQuantity(final int position){
 
-            okbtn.setOnClickListener(new View.OnClickListener() {
+            quan.addTextChangedListener(new TextWatcher() {
                 @Override
-                public void onClick(View v) {
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
                     if(quan.getText().toString().trim().length() != 0){
                         quantity_name=quan.getText().toString();
                         int q=Integer.parseInt(quantity_name);
@@ -101,11 +112,41 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     else {
                         quan.setError("Empty Quantity");
                     }
-
-
-
                 }
             });
+
+//            okbtn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    if(quan.getText().toString().trim().length() != 0){
+//                        quantity_name=quan.getText().toString();
+//                        int q=Integer.parseInt(quantity_name);
+//                        int totalquantity=Integer.parseInt(profiles.get(position).getQuantity());
+//
+//                        if(q>0 && q<=100){
+//
+//                            if(q<=totalquantity){
+//                                profiles.get(position).setQuan(quantity_name);
+//                                calculateTotalAmount(position);
+//                            }
+//                            else{
+//                                quan.setError("Quantity exceeded");
+//                            }
+//
+//                        }
+//                        else {
+//                            quan.setError("Invalid quantity");
+//                        }
+//                    }
+//                    else {
+//                        quan.setError("Empty Quantity");
+//                    }
+//
+//
+//
+//                }
+//            });
 
         }
 
