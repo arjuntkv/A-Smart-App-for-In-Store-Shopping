@@ -74,6 +74,7 @@ public class AdminListProductsActivity extends AppCompatActivity {
                     list.add(p);
                 }
 
+                AdminNotificationsPage.Notification_method();
                 adapter=new AdminMyAdapter(AdminListProductsActivity.this,list);
                 recyclerView.setAdapter(adapter);
             }
@@ -159,10 +160,5 @@ public class AdminListProductsActivity extends AppCompatActivity {
 
         dialog.show();
     }
-
-
-
-
-
 
 }

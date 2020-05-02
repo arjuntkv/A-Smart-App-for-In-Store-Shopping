@@ -58,6 +58,19 @@
                 android:textColor="@android:color/white" />
 
 
+            //Notification Panel
+            <Button
+                android:id="@+id/ad_noti_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/ed_design"
+                android:padding="6dp"
+                android:text="Notifiaction Panel"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white" />
+
+
             />
 
         </LinearLayout>

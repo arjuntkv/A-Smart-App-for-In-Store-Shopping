@@ -12,6 +12,7 @@ public class AdminHomeActivity extends AppCompatActivity {
 
     private Button add_btn;
     private Button list_btn;
+    private Button Notify_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class AdminHomeActivity extends AppCompatActivity {
 
         add_btn=(findViewById(R.id.ad_btn_add));
         list_btn=(findViewById(R.id.ad_btn_list));
+        Notify_btn=(findViewById(R.id.ad_noti_btn));
 
         //forward to add products page(AdminAddproductsActivity.class)
         add_btn.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +42,14 @@ public class AdminHomeActivity extends AppCompatActivity {
 
                 startActivity(new Intent(getApplicationContext(),AdminListordersActivity.class));
 
+            }
+        });
+
+        //forward to Notifications page(AdminAddproductsActivity.class)
+        Notify_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AdminNotificationsPage.class));
             }
         });
     }

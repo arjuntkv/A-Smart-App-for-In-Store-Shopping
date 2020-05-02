@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
                             ProductAvailableProfile p =dataSnapshot1.getValue(ProductAvailableProfile.class);
                             llist.add(p);
                         }
+
+                        AdminNotificationsPage.Notification_method();
                     }
 
                     @Override
